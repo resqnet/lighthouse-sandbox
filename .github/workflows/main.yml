@@ -17,5 +17,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: 'lighthouse-results'
+          path: /home/runner/work/lighthouse-sandbox/lighthouse-sandbox
       - name : Echo download path
         run: echo ${{steps.download.outputs.download-path}}
