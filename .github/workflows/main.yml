@@ -13,6 +13,7 @@ jobs:
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: false # upload lighthouse report to the temporary storage
       - name: load 
+        id: download
         uses: actions/download-artifact@v3
         with:
           name: 'lighthouse-results'
