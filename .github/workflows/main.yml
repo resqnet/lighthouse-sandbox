@@ -12,10 +12,9 @@ jobs:
             https://google.com/
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: false # upload lighthouse report to the temporary storage
-
       - name: load 
         uses: actions/download-artifact@v3
         with:
           name: 'lighthouse-results'
-      -name : Echo download path
+      - name : Echo download path
         run: echo ${{steps.download.outputs.download-path}}
