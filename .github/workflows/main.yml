@@ -4,7 +4,7 @@ jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v9
         with:
@@ -13,4 +13,7 @@ jobs:
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: false # upload lighthouse report to the temporary storage
       - name: Run Script
-        run: 'src/index.js'
+        uses: actions/setup-node@v3
+        with:
+            node-version: 16
+      - run: node src/index.js
