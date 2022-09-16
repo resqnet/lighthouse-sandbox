@@ -10,7 +10,7 @@ const resultJsons = fs.readdirSync(`./${resultDirPath}`, {withFileTypes: true})
     .filter(file => path.extname(file).toLowerCase() === ".json" && new RegExp(/lhr-\d+\.json/).test(path.basename(file).toString()));
 
 resultJsons.forEach(file => {    
-    console.log("Initialize:" + file);
+    console.log("Load:" + file);
     const data = parse(toJson(`./${resultDirPath}/${file}`));
-    //console.log(data);
+    console.log(data);
 });
