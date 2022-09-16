@@ -3,13 +3,11 @@ import * as path from 'path';
 import {parse, toJson} from './parser.js';
 
 const resultDirPath = ".lighthouseci";
-//const resultDirPath = "score";
-
 
 const resultJsons = fs.readdirSync(`./${resultDirPath}`, {withFileTypes: true})
     .filter(dirent => dirent.isFile())
     .map(({name})=> name)
-    .filter(file => path.extname(file).toLowerCase() === ".json");
+    .filter(file => path.extname(file).toLowerCase() === ".json" && path.basename.toString().match("lhr-\d+.json"));
 
 resultJsons.forEach(file => {
     console.log("Initialize:" + file);

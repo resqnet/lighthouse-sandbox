@@ -130,3 +130,4 @@ dist
 .pnp.*
 
 score/
+.lighthouseci
