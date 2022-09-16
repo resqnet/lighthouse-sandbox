@@ -42,4 +42,4 @@ export const parse = (lhr) => {
 
 };
 
-export const toJson = filePath => JSON.parse(fs.readFileSync('./score/' + filePath));
+export const toJson = filePath => JSON.parse(fs.readFileSync(filePath));
