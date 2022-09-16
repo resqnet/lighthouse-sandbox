@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import {parse, toJson} from './parser.js';
 
-const resultDirPath = ".lighthouse";
+const resultDirPath = ".lighthouseci";
 
 const resultJsons = fs.readdirSync('./' + resultDirPath, {withFileTypes: true})
     .filter(dirent => dirent.isFile())
