@@ -10,7 +10,8 @@ jobs:
         with:
           urls: |
             https://google.com/
-          uploadArtifacts: false # save results as an action artifacts
+            https://www.yahoo.co.jp/
+          uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: false # upload lighthouse report to the temporary storage
       - name: Run Script
         uses: actions/setup-node@v3
