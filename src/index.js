@@ -1,4 +1,4 @@
 import * as fs from 'fs';
 
-const result = fs.readdirSync('./');
+const result = fs.readdirSync('./.lighthouseci');
 console.log(result);
